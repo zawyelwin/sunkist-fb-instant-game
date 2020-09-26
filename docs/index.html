@@ -1,0 +1,169 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Quiz App for Facebook Instant Games</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h1 class="center">Quiz App for Facebook Instant Games</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 24/07/2019<br>
+					Last Updated: 19/04/2020<br>
+					By: Yied Pozi<br>
+					Email: <a href="mailto:yiedpozi@gmail.com">yiedpozi@gmail.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing Quiz App for Facebook Instant Games. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="https://codecanyon.net/user/yiedpozi" target="_blank">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol>
+			<li><a href="#introduction">Introduction</a></li>
+			<li><a href="#quickStart">Quick Start</a></li>
+			<li><a href="#customization">Customization</a></li>
+			<li><a href="#credits">Sources & Credits</a></li>
+		</ol>
+		
+		<hr>
+
+		<h3 id="introduction"><strong>1. Introduction</strong> - <a href="#toc">top</a></h3>
+		<p>Thank you for purchasing Quiz Game. This quiz game is developed for Facebook Instant Games. It is a single page application and no database required.</p>
+		<p>I'd be glad to help you if you have any questions relating to this product. No guarantees, but I'll do my best to assist.</p>
+		<p>If you have a more general question relating to the our product, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p>
+
+		<hr>
+
+		<h3 id="quickStart"><strong>2. Quick Start</strong> - <a href="#toc">top</a></h3>
+		<p>If you don't need to make any customization, you just can upload the entire file in the <strong>dist</strong> folder to your hosting or Facebook Web Hosting for Instant Games.</p>
+		<p>To create new quiz, you can follow the following steps.</p>
+
+		<h4><strong>1. Update quizzes.json file.</strong></h4>
+		<p>In this file, you can specify the slug and the title of the quiz.</p>
+
+		<pre>{
+    "quiz-slug": "This is quiz title"
+}</pre>
+
+		<h4><strong>2. Create a folder in quizzes folder based on your slug.</strong></h4>
+		<p>Your quiz folder should be renamed based on slug that you enter in <strong>quizzes.json</strong> file and should contain the following files.</p>
+
+		<ul>
+			<li>
+				<strong>config.json</strong>
+				<ul>
+					<li>
+						In this file, you can specify how many images, to show or hide the Facebook player name or pic.
+						<pre>{
+    "images": "Specify the number of result images.",
+    "player": {
+        "name": {
+            "font": "bold 45px Arial",
+            "color": "#fff|rgba(0,0,0,.5)",
+            "position": {
+                "x": 300,
+                "y": 135
+            },
+            "align": "left|right|center",
+            "show": true|false
+        },
+        "pic": {
+            "width": 200,
+            "height": 200,
+            "position": {
+                "x": 77,
+                "y": 283
+            },
+            "show": true|false
+        }
+    }
+}</pre>
+					</li>
+				</ul>
+			</li>
+			<li><strong>thumbnail.png</strong> - The thumbnail of the quiz. Will be displayed on home page.</li>
+			<li><strong>List of images</strong> - Include all quiz result images in PNG format and should be renamed in numerical, starting from 1.</li>
+		</ul>
+
+		<h4><strong>3. Generate production files</strong></h4>
+		<p>To generate production files or use the development server, you need to have Node.js installed. <a href="https://nodejs.org/en/download/" target="_blank">Click here to install Node.js.</a></p>
+		<p>Then, run <strong>npm install</strong> to install required package files.</p>
+		<p>To generate production files, follow this steps:</p>
+		<ol>
+			<li>Open terminal or command prompt.</li>
+			<li>Type <strong>npm run build</strong> to generate production files.</li>
+			<li>Done, your production folder is dist folder.</li>
+		</ol>
+
+		<p>To use the development server, follow this steps:</p>
+		<ol>
+			<li>Open terminal or command prompt.</li>
+			<li>Type <strong>npm run serve</strong> to start the development server.</li>
+			<li>You may see the app is running through development server at <a href="http://localhost:8080/#/" target="_blank">http://localhost:8080/#/</a>.</li>
+		</ol>
+
+		<h4><strong>4. You're ready to go.</strong></h4>
+		<p>Now, your quiz app are ready to go. You can upload dist folder to your hosting or use Facebook Web Hosting to host your quiz app.</p>
+
+		<hr>
+
+		<h3 id="customization"><strong>3. Customization</strong> - <a href="#toc">top</a></h3>
+
+		<p>If you need to make customization such as title, styling, etc, you should use development server that will help you to create a local server where you can see the customization you have made on your browser.</p>
+
+		<p>Refer to Quick Start section on how to use the development server.</p>
+
+		<h4><strong>Update App Title</strong></h4>
+		<p>Open <strong>.env</strong> file on root directory and update <strong>VUE_APP_NAME</strong> variable to your new <strong>app title</strong>.</p>
+
+		<h4><strong>Include Facebook Audience Network Ad</strong></h4>
+		<p>Open <strong>.env</strong> file on root directory and update <strong>VUE_APP_FAN_AD_ID</strong> variable to <strong>Facebook Audience Network Ad Placement ID</strong> and update <strong>VUE_APP_FAN_AD_FREQUENCY</strong> variable to the <strong>frequency of showing ad</strong> to user (default is 3).</p>
+
+		<h4><strong>Customize Styling</strong></h4>
+		<p>You can customize to your own styling in <strong>src/assets/css/app.css</strong>.</p>
+
+		<h4><strong>Javascript</strong></h4>
+		<p>If you wish to include any script, you can put in <strong>src/assets/js/app.js</strong>.</p>
+
+		<p>If you have done make customization, open terminal or command prompt and type “npm run production” to generate updated files.</p>
+
+		<hr>
+		
+		<h3 id="credits"><strong>4. Sources and Credits</strong> - <a href="#toc">top</a></h3>
+		
+		<ul>
+			<li>Mobile Legends wallpaper for quiz example:<br>https://www.deviantart.com/fachrifhr/art/Wallpaper-Desktop-PC-Mobile-Legend-HD-All-Hero-743841492</li>
+		</ul>
+		
+		<hr>
+		
+		<p>Once again, thank you so much for purchasing this script. As I said at the beginning, I'd be glad to help you if you have any questions relating to this script. No guarantees, but I'll do my best to assist. If you have a more general question relating to the our product, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p> 
+		
+		<p class="append-bottom alt large"><strong>Yied Pozi</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>

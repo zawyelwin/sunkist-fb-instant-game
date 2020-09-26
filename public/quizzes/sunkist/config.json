@@ -1,0 +1,24 @@
+{
+    "images": 4,
+    "player": {
+        "name": {
+            "font": "bold 30px Arial",
+            "color": "#fff",
+            "position": {
+                "x": 210,
+                "y": 535
+            },
+            "align": "center",
+            "show": true
+        },
+        "pic": {
+            "width": 200,
+            "height": 200,
+            "position": {
+                "x": 77,
+                "y": 283
+            },
+            "show": true
+        }
+    }
+}

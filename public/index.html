@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="full-screen" content="yes">
+        <meta name="screen-orientation" content="portrait">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width,user-scalable=no">
+
+        <title><%= VUE_APP_NAME %></title>
+
+        <script src="https://connect.facebook.net/en_US/fbinstant.6.3.js"></script>
+    </head>
+    <body>
+        <noscript>
+            <strong>We're sorry but <%= VUE_APP_NAME %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+        </noscript>
+        <div id="app"></div>
+
+        <script type="text/javascript">
+            FBInstant.initializeAsync().then(function() {
+                FBInstant.setLoadingProgress(50);
+                FBInstant.setLoadingProgress(100);
+
+                FBInstant.startGameAsync();
+            });
+        </script>
+    </body>
+</html>
